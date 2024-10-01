@@ -60,6 +60,7 @@ Precisamos criar um pod com as seguintes caracteristicas:
 - Precisamos ter um outro container rodando o busybox e executando o seguinte comando: 
 ```bash
  => command: ["sh", "-c", "tail -f /tmp/index.html"]
+```
 ### Resposta 2
 
 Criamos o arquivo pod.yaml e nele adicionamos os três containers.
