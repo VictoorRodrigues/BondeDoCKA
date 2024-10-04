@@ -25,15 +25,3 @@ Muito bem, o gerente está feliz, mas não perfeitamente explendido em sua felic
 ```bash
 ETCDCTL_API=3 etcdctl snapshot restore snap_do_gerente.db --data-dir /tmp/etcd-test
 ```
-
-```bash
-```
-```bash
-```
-
-### Questão 3
-
-### Resposta 3
-
-```bash
-```
