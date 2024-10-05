@@ -40,6 +40,7 @@ Precisamos de algumas informações do nosso cluster e dos pods que lá estão.
 Portando, precisamos do seguinte:
 - Adicione todos os pods do cluster por ordem de criação, dentro do arquivo /tmp/pods.txt
 - Remova um pod do weave, verifique os eventos e os adicione no arquivo /tmp/eventos.txt
+- Liste todos os pods que estão em execução no node 4 e os adicione no arquivo /tmp/pods-node-05.txt
 
 
 ### Resposta 2
@@ -47,4 +48,5 @@ Portando, precisamos do seguinte:
 ```bash
 kubectl get pods --sort-by={metadata.creationTimestamp} -A -o name > /tmp/pods.txt
 kubectl get events --all-namespaces --sort-by={metadata.creationTimestamp}
+kubectl get pods --all-namespaces --field-selector=spec.nodeName=kind-worker2 -o name > /tmp/pods-node-05.txt
 ```
