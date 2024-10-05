@@ -36,8 +36,15 @@ kubectl create -f pod.yaml
 ```
 
 ### Questão 2
+Precisamos de algumas informações do nosso cluster e dos pods que lá estão.
+Portando, precisamos do seguinte:
+- Adicione todos os pods do cluster por ordem de criação, dentro do arquivo /tmp/pods.txt
+- Remova um pod do weave, verifique os eventos e os adicione no arquivo /tmp/eventos.txt
+
 
 ### Resposta 2
 
 ```bash
+kubectl get pods --sort-by={metadata.creationTimestamp} -A -o name > /tmp/pods.txt
+kubectl get events --all-namespaces --sort-by={metadata.creationTimestamp}
 ```
